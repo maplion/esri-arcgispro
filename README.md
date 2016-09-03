@@ -12,12 +12,16 @@ This tool utilizes Google Map's Elevation API to acquire elevations along with t
 
 It assumes a projected shapefile that is not WGS 1984.  This is also a Python Toolbox and assumes you're running it from within ArcGIS Pro.  You can run it standalone, but you will need to comment out the portion where it attempts to load the layer into the map.
 
-Inputs: 
-	1. Point Shapefile/Feature Layer (Projected)
-	2. Projected Point Shapefile Output Name
-	3. Projected Point Shapefile Output Folder
+Inputs:
+ 
+1. Point Shapefile/Feature Layer (Projected)
+
+2. Projected Point Shapefile Output Name
+
+3. Projected Point Shapefile Output Folder
 
 Outputs:
-	1. Copy of input Shapefile with POINT_X, POINT_Y, Elevation, and Resolution populated columns.
+
+1. Copy of input Shapefile with POINT_X, POINT_Y, Elevation, and Resolution populated columns.
 
 
