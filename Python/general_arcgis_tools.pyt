@@ -77,13 +77,14 @@ class GetElevationsFromPoints(object):
         @author: Ryan Dammrose aka MapLion
         """
         try:
+			# Comment these parameters out if running standalone
             input_feature = parameters[0].valueAsText
             output_feature_name = parameters[1].valueAsText
             output_feature_location = parameters[2].valueAsText
 
             arcpy.env.overwriteOutput = "True"
 
-            # Test Variables
+            # Test Variables -- uncomment if running standalone
             # input_feature = r"C:\Users\dammrosr\Desktop\castford\castford.shp"
             # output_feature_name = "test"
             # output_feature_location = r"C:\TEMP"
@@ -150,7 +151,7 @@ class GetElevationsFromPoints(object):
                         if count == result_length:
                             break
 
-            # Add layer to map
+            # Add layer to map -- comment out if running standalone
             messages.AddMessage("Adding Projected Layer to Map.")
             layer = arcpy.MakeFeatureLayer_management(output_feature, output_feature_name +
                                                       "_elevation")[0]
