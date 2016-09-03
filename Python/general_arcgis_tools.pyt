@@ -71,13 +71,13 @@ class GetElevationsFromPoints(object):
         """
         Created on August 30th, 2016
         Note: Because this uses Google API, it is limited to 2500 service calls a day.
-		That is about 125,000 points to elevation per day at 50 points per service call.
-		Calls are limited in length by the url character limit.
+        That is about 125,000 points to elevation per day at 50 points per service call.
+        Calls are limited in length by the url character limit.
 
         @author: Ryan Dammrose aka MapLion
         """
         try:
-			# Comment these parameters out if running standalone
+            # Comment these parameters out if running standalone
             input_feature = parameters[0].valueAsText
             output_feature_name = parameters[1].valueAsText
             output_feature_location = parameters[2].valueAsText
@@ -135,7 +135,7 @@ class GetElevationsFromPoints(object):
 
             fields = ["POINT_X", "POINT_Y", "Elevation", "Resolution"]
             with arcpy.da.UpdateCursor(output_feature, fields) as cursor:
-                for results in datas:
+                for _ in datas:
                     count = 0
                     result_length = len(data["results"])
                     for row in cursor:
